@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWithMe</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .response,
+        .chat_history {
+            font-size: small;
+            overflow-y: scroll;
+            height: 400px;
+        }
+
+        #primary {
+            display: flex;
+        }
+
+        #primary>div {
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 50px;
+        }
+
+        #container_query {
+            text-align: center;
+            margin-top: -10px;
+            position: fixed;
+        }
+
+        #chatInput {
+            height: 30px;
+            width: 300px;
+            margin-left: 30px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="primary">
+        <div id="left">
+            <div id="container_query">
+                <input type="text" id="chatInput" placeholder="Type your query...">
+                <button id="submit" style="height: 34px; width: 100px;">submit</button>
+            </div>
+            <div class="response" style="margin-top: 40px;"></div>
+        </div>
+        <div id="right">
+            <h1 style="text-align: center; margin-top: -10px;">Chat History</h1>
+            <div class="chat_history">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./response.js"></script>
+
+</html>
